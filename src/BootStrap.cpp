@@ -11,7 +11,7 @@ int main() {
 
         List list;
 
-        for (int i = 0; i < 100'000; i++) {
+        for (int i = 0; i < 1'000'000; i++) {
             cout << "iteration #" << i << endl;
             list.push(new int[4]{1,1,2,2}, 4);
         }

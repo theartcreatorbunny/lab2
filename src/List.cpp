@@ -13,15 +13,9 @@ void List::push(int *val, int size) {
     new_node->val = val;
     new_node->next = nullptr;
 
-    if (this -> head  == nullptr ) {
-        this -> head = new_node;
-    } else {
-        node* tail = this->head;
-        while (tail ->next != nullptr) {
-            tail = tail->next;
-        }
-        tail ->next = new_node;
-    }
+    node* old_head = this->head;
+    this->head = new_node;
+    new_node->next = old_head;
     this->size++;
 }
 
